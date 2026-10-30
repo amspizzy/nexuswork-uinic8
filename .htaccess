@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Blokir akses langsung ke berkas konfigurasi dan kredensial.
+<FilesMatch "^\.env|^composer\.(json|lock)$|\.(sql|log|md)$">
+    <IfModule authz_core_module>
+        Require all denied
+    </IfModule>
+    <IfModule !authz_core_module>
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 70" width="280" height="70">
+  <defs>
+    <linearGradient id="nwSkyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0245a3" />
+      <stop offset="50%" stop-color="#0d63d8" />
+      <stop offset="100%" stop-color="#1e80ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- Circle Rocket Badge -->
+  <g transform="translate(8, 8)">
+    <circle cx="27" cy="27" r="26" fill="#ffffff" />
+    <!-- Mini Rocket rotated -45 -->
+    <g transform="translate(27, 27) rotate(-45) translate(-27, -27)">
+      <path d="M 20 29 C 18 35 15 38 15 38 C 15 38 21 37 24 34 Z" fill="#0245a3" />
+      <path d="M 34 29 C 36 35 39 38 39 38 C 39 38 33 37 30 34 Z" fill="#0245a3" />
+      <path d="M 27 10 C 31 16 33 24 33 33 C 27 35 27 35 21 33 C 21 24 23 16 27 10 Z" fill="#0d63d8" />
+      <circle cx="27" cy="20" r="3" fill="#ffffff" />
+      <circle cx="27" cy="20" r="1.8" fill="#0d63d8" />
+      <path d="M 25 34 Q 27 41 27 43 Q 27 41 29 34 Z" fill="#38bdf8" />
+    </g>
+  </g>
+
+  <!-- Typography -->
+  <text x="74" y="38" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#0f172a" letter-spacing="-0.5">Nexus<tspan fill="#0d63d8">Work</tspan></text>
+  <text x="75" y="52" font-family="'Plus Jakarta Sans', -apple-system, sans-serif" font-size="9" font-weight="700" fill="#64748b" letter-spacing="1.2">PRODUCTION SYSTEM &bull; UINIC 8.0</text>
+</svg>

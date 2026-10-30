@@ -1,0 +1,883 @@
+{
+  "page": {
+    "size": "A4",
+    "margin_top": 25,
+    "margin_bottom": 25,
+    "margin_left": 30,
+    "margin_right": 30
+  },
+  "footer_page_numbers": true,
+  "styles": [
+    {
+      "name": "TitleCustom",
+      "font": "Arial",
+      "size": 18,
+      "bold": true,
+      "alignment": "center"
+    },
+    {
+      "name": "SubtitleCustom",
+      "font": "Arial",
+      "size": 14,
+      "bold": true,
+      "alignment": "center"
+    },
+    {
+      "name": "Heading1Custom",
+      "font": "Arial",
+      "size": 14,
+      "bold": true,
+      "color": "1F4788"
+    },
+    {
+      "name": "BodyText",
+      "font": "Arial",
+      "size": 11
+    }
+  ],
+  "blocks": [
+    {
+      "type": "paragraph",
+      "style": "TitleCustom",
+      "text": "PROPOSAL LOMBA WEB DEVELOPMENT"
+    },
+    {
+      "type": "paragraph",
+      "style": "TitleCustom",
+      "text": "UINIC 8.0"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "SubtitleCustom",
+      "text": "[LOGO TIM - INSERT MANUALLY]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "TitleCustom",
+      "text": "[NAMA TIM]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "SubtitleCustom",
+      "text": "NEXUSWORK"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Integrated Production Management System"
+    },
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "DAFTAR ISI"
+    },
+    {
+      "type": "toc"
+    },
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "A. NAMA SELURUH ANGGOTA TIM"
+    },
+    {
+      "type": "table",
+      "style": "Table Grid",
+      "header": ["No", "Nama", "NIM", "Keterangan"],
+      "rows": [
+        ["1", "[NAMA KETUA]", "[NIM]", "Ketua"],
+        ["2", "[NAMA ANGGOTA 1]", "[NIM]", "Anggota"],
+        ["3", "[NAMA ANGGOTA 2]", "[NIM]", "Anggota"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "B. JUDUL KARYA"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Judul Karya: ", "bold": true},
+        {"text": "NexusWork - Integrated Production Management System"}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Penjelasan Judul Karya:", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "NexusWork merupakan sistem manajemen produksi terintegrasi yang menghubungkan (nexus) berbagai aspek operasional bisnis dalam satu platform terpadu. Nama ini mencerminkan konsep inti sistem: menjadi titik sentral (nexus) yang mengintegrasikan web dashboard untuk manajemen dan mobile app untuk monitoring real-time, memfasilitasi alur kerja (work) yang efisien dari order hingga pengiriman."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "C. LATAR BELAKANG MASALAH"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Industri manufaktur dan produksi menghadapi tantangan signifikan dalam mengelola operasional harian mereka. Permasalahan yang sering muncul meliputi:"
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Kesulitan tracking status order secara real-time antara tim produksi, packing, dan pengiriman",
+        "Tidak adanya sistem terpusat untuk manajemen inventory yang menyebabkan keterlambatan produksi",
+        "Kurangnya visibilitas terhadap kinerja operasional dan laporan keuangan",
+        "Komunikasi yang tidak efisien antara manajer di kantor dan staf lapangan",
+        "Pencatatan manual yang rawan error dan memakan waktu"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Solusi yang kami tawarkan adalah NexusWork, sebuah sistem terintegrasi berbasis web dan mobile yang menyediakan:"
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Dashboard web untuk owner/manajer dalam mengelola order, inventory, dan laporan",
+        "Aplikasi mobile untuk staf lapangan melakukan monitoring real-time",
+        "Firebase Realtime Database untuk sinkronisasi data instan",
+        "REST API dengan JWT authentication untuk keamanan data",
+        "Laporan otomatis untuk analisis performa bisnis"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Metode pengembangan menggunakan pendekatan agile dengan iterasi cepat: Understand (analisis kebutuhan bisnis), Research (studi existing systems), Analyze (identifikasi gap), Design (arsitektur sistem dan UI/UX), dan Develop & Test (implementasi dengan continuous testing)."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "D. TUJUAN DAN MANFAAT"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Tujuan"
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "Mengembangkan sistem manajemen produksi yang terintegrasi dan user-friendly",
+        "Meningkatkan efisiensi operasional melalui digitalisasi proses bisnis",
+        "Menyediakan monitoring real-time untuk meningkatkan responsiveness tim",
+        "Mengotomasi pencatatan dan pelaporan untuk mengurangi human error",
+        "Menciptakan platform scalable yang dapat beradaptasi dengan pertumbuhan bisnis"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Manfaat"
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "Bagi Owner/Manajer: Visibilitas penuh terhadap operasional, laporan real-time, dan pengambilan keputusan berbasis data",
+        "Bagi Staf Lapangan: Akses mobile untuk update status order, notifikasi instan, dan koordinasi yang lebih baik",
+        "Bagi Bisnis: Pengurangan biaya operasional, peningkatan produktivitas, dan customer satisfaction yang lebih tinggi",
+        "Bagi Industri: Contoh implementasi teknologi modern dalam digitalisasi UMKM manufaktur"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "E. ANALISIS"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "I. Target Pengguna"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Primary Users:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Owner/Manajer Perusahaan: Usia 30-55 tahun, membutuhkan dashboard komprehensif untuk monitoring bisnis",
+        "Staff Produksi & Packing: Usia 20-40 tahun, familiar dengan smartphone, membutuhkan tools mobile untuk update status",
+        "Admin/Finance: Membutuhkan sistem pelaporan otomatis dan manajemen data transaksi"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Secondary Users:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Customer: Dapat melacak status order mereka",
+        "Supplier: Integrasi untuk manajemen inventory"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "II. Batasan Produk"
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Sistem fokus pada manajemen produksi, bukan ERP penuh (tidak include HR, payroll)",
+        "Mobile app versi Android saja (iOS development fase berikutnya)",
+        "Kapasitas optimal untuk perusahaan dengan 50-500 transaksi/bulan",
+        "Memerlukan koneksi internet untuk real-time sync (offline mode limited)",
+        "Bahasa interface: Bahasa Indonesia (multi-language support roadmap)"
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "III. Platform yang Digunakan"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Backend:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Framework: CodeIgniter 3 (PHP 8.3)",
+        "Database: MySQL/MariaDB",
+        "Authentication: JWT (JSON Web Token)",
+        "Real-time: Firebase Realtime Database",
+        "Hosting: Hostinger + Cloudflare CDN"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Frontend Web:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Template: SB Admin 2 (Bootstrap 4)",
+        "JavaScript: Vanilla JS + Chart.js untuk visualisasi",
+        "Real-time update: Firebase JS SDK"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Mobile App:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Framework: Flutter 3.47",
+        "State Management: Riverpod",
+        "Authentication: Firebase Auth + Google Sign-In",
+        "HTTP Client: Dio",
+        "Platform: Android (iOS-ready codebase)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "F. METODE"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Pengembangan NexusWork menggunakan pendekatan Agile dengan lima fase utama:"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "1. Understand (Memahami)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Melakukan deep-dive interview dengan stakeholder untuk memahami pain points, workflow existing, dan ekspektasi sistem. Mengidentifikasi peran user (owner, staff produksi, admin) dan kebutuhan spesifik masing-masing."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "2. Research (Riset)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Studi kompetitor (ERPNext, Odoo, sistem lokal), analisis teknologi (perbandingan Laravel vs CI3, Flutter vs React Native), dan best practices untuk production management systems."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "3. Analyze (Analisis)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Gap analysis antara kebutuhan dan solusi existing, membuat requirement specification (functional & non-functional), dan merancang arsitektur sistem (database schema, API endpoints, state management)."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "4. Design (Desain)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "UI/UX design dengan prinsip mobile-first dan responsive, wireframing untuk setiap module, prototyping interactive dengan Figma, dan design system (color palette, typography, component library)."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "5. Develop & Test (Pengembangan & Pengujian)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Implementasi dengan sprint 1-2 minggu, continuous integration/deployment, unit testing untuk critical modules, dan iterative user testing untuk feedback loop."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "G. DESIGN BRIEF"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Logo"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "[INSERT LOGO NEXUSWORK - Minimalist design dengan konsep network/connection nodes, mencerminkan integrasi sistem]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Warna"
+    },
+    {
+      "type": "table",
+      "style": "Table Grid",
+      "header": ["No", "Kode Warna", "Makna/Arti"],
+      "rows": [
+        ["1", "#2563EB (Blue)", "Primary color - Profesionalisme, kepercayaan, teknologi modern"],
+        ["2", "#F59E0B (Amber)", "Status 'Antri' - Perhatian, pending action"],
+        ["3", "#3B82F6 (Blue)", "Status 'Produksi' - Proses aktif, produktivitas"],
+        ["4", "#8B5CF6 (Purple)", "Status 'Packing' - Tahap penyelesaian"],
+        ["5", "#06B6D4 (Cyan)", "Status 'Dikirim' - Pergerakan, distribusi"],
+        ["6", "#10B981 (Green)", "Status 'Diterima' - Sukses, completion"],
+        ["7", "#EF4444 (Red)", "Status 'Cancel' - Alert, penolakan"],
+        ["8", "#F7F8FA (Gray)", "Background - Netral, clean, modern"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Jenis Huruf"
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Primary Font: Inter - Modern sans-serif, excellent readability untuk dashboard",
+        "Secondary Font: Arial - Fallback universal, konsisten di semua platform",
+        "Monospace: Consolas - Untuk kode, invoice number, technical data"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "H. SKENARIO"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "User A: Owner/Manajer", "bold": true}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "Login ke web dashboard menggunakan kredensial admin",
+        "Melihat dashboard summary: total order hari ini, status breakdown, grafik penjualan",
+        "Membuat order baru untuk customer dengan detail produk dan HPP",
+        "Mengelola inventory: menambah/mengurangi stok material",
+        "Melihat laporan profit real-time berdasarkan order yang selesai",
+        "Export laporan penjualan bulanan ke Excel",
+        "Monitoring activity log untuk audit trail"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "User B: Staff Produksi", "bold": true}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "Login mobile app dengan Google Sign-In",
+        "Melihat daftar order dengan status 'Antri' dan 'Produksi'",
+        "Klik order untuk melihat detail: produk, jumlah, deadline",
+        "Update status order dari 'Antri' → 'Produksi' saat mulai kerja",
+        "Mendapat notifikasi real-time jika ada order baru urgent",
+        "Update ke 'Packing' setelah produksi selesai",
+        "Melihat riwayat order yang sudah dikerjakan"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "User C: Staff Packing & Pengiriman", "bold": true}
+      ]
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "Login mobile app dan filter order status 'Packing'",
+        "Scan/input order untuk verifikasi barang",
+        "Update status ke 'Dikirim' dengan catatan ekspedisi",
+        "Customer otomatis mendapat notifikasi tracking",
+        "Konfirmasi 'Diterima' setelah customer menerima barang"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "I. USER FLOW"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "1. Order Management Flow (Web Dashboard)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Login → Dashboard → Klik 'Tambah Order' → Isi form (customer, produk, qty, HPP, deadline) → Submit → Order masuk daftar dengan status 'Antri' → Firebase sync ke mobile → Staff produksi terima notifikasi"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "2. Status Update Flow (Mobile App)", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Login (Google/Email) → Dashboard mobile → List order → Tap order card → Lihat detail → Tap 'Update Status' dropdown → Pilih status baru → Konfirmasi → API request → Database update → Firebase real-time broadcast → Web dashboard auto-refresh → Activity log tercatat"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "3. Inventory Management Flow", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Web Dashboard → Menu 'Inventory' → List material → Klik 'Edit' → Update qty (tambah/kurangi) → Submit → Sistem cek threshold → Jika < minimum, trigger alert → Activity log + notification → Report updated"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "4. Reporting Flow", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Dashboard → Menu 'Laporan' → Pilih jenis (Penjualan/Profit/Inventory) → Set date range → Generate → Tampil table + chart → Opsi 'Export Excel' → Download file"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "J. HASIL PENGUJIAN PENGGUNA (USER TESTING)"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "[PLACEHOLDER - User testing akan dilakukan dengan metodologi berikut:]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Partisipan:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "5 owner/manajer UMKM manufaktur (web dashboard testing)",
+        "10 staff produksi/lapangan (mobile app testing)",
+        "Rentang usia 22-55 tahun, berbagai tingkat tech-savviness"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Alat Ukur:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "User Experience Questionnaire (UEQ) - mengukur attractiveness, perspicuity, efficiency, dependability, stimulation, novelty",
+        "Task Completion Rate - success rate menyelesaikan 5 task scenarios",
+        "Time on Task - durasi rata-rata menyelesaikan task",
+        "System Usability Scale (SUS) - skor usability 0-100"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Target Hasil:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "UEQ Score > 1.5 (Above Average) untuk semua kategori",
+        "Task Completion Rate > 85%",
+        "Average Time on Task < 2 menit per task",
+        "SUS Score > 70 (Good usability)"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "K. KESIMPULAN"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "NexusWork berhasil mengintegrasikan web dashboard dan mobile application dalam satu ekosistem manajemen produksi yang seamless. Sistem ini menjawab kebutuhan digitalisasi UMKM manufaktur dengan pendekatan user-centric dan teknologi modern."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Key Achievements:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Dual-platform solution: Web untuk manajemen, Mobile untuk monitoring real-time",
+        "Firebase Realtime Database untuk sinkronisasi instan tanpa polling",
+        "REST API dengan JWT authentication untuk keamanan enterprise-grade",
+        "Responsive design dan intuitive UX untuk adoption rate tinggi",
+        "Modular architecture untuk scalability dan future enhancements"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Impact Potensial:", "bold": true}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "Sistem ini dapat mengurangi waktu koordinasi hingga 60%, mengeliminasi error pencatatan manual, dan meningkatkan visibility operasional. Cocok untuk UMKM yang ingin scale up tanpa menambah overhead administratif signifikan."
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Roadmap Pengembangan:", "bold": true}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "iOS app development (Q1 2027)",
+        "Customer portal untuk tracking order mandiri",
+        "Integration dengan payment gateway",
+        "Advanced analytics & predictive inventory",
+        "Multi-tenant SaaS model untuk wider adoption"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "L. DAFTAR PUSTAKA"
+    },
+    {
+      "type": "numbered_list",
+      "items": [
+        "CodeIgniter Framework Documentation. (2024). CodeIgniter 3 User Guide. https://codeigniter.com/userguide3/",
+        "Flutter Development Team. (2026). Flutter Documentation. https://docs.flutter.dev/",
+        "Firebase. (2026). Firebase Realtime Database Documentation. https://firebase.google.com/docs/database",
+        "Nielsen Norman Group. (2023). Mobile UX Best Practices. https://www.nngroup.com/",
+        "Sommerville, I. (2015). Software Engineering (10th Edition). Pearson Education."
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "M. LAMPIRAN"
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Lampiran A: ", "bold": true},
+        {"text": "Database Schema Diagram"}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "[INSERT DIAGRAM - ERD dengan tabel users, orders, inventory, master_hpp, activity_log]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Lampiran B: ", "bold": true},
+        {"text": "API Endpoints Documentation"}
+      ]
+    },
+    {
+      "type": "table",
+      "style": "Table Grid",
+      "header": ["Method", "Endpoint", "Description"],
+      "rows": [
+        ["POST", "/api/v1/auth/login", "User authentication"],
+        ["GET", "/api/v1/auth/me", "Get current user"],
+        ["GET", "/api/v1/orders", "List all orders"],
+        ["POST", "/api/v1/orders", "Create new order"],
+        ["PUT", "/api/v1/orders/{id}", "Update order"],
+        ["GET", "/api/v1/dashboard/summary", "Dashboard metrics"],
+        ["GET", "/api/v1/inventory", "List inventory"],
+        ["GET", "/api/v1/reports/profit", "Profit report"]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Lampiran C: ", "bold": true},
+        {"text": "Screenshot Aplikasi"}
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "text": "[INSERT SCREENSHOTS - Web dashboard (login, dashboard, orders, inventory, laporan) dan Mobile app (login, dashboard, order list, order detail)]"
+    },
+    {
+      "type": "paragraph",
+      "text": " "
+    },
+    {
+      "type": "paragraph",
+      "style": "BodyText",
+      "runs": [
+        {"text": "Lampiran D: ", "bold": true},
+        {"text": "Link Demo"}
+      ]
+    },
+    {
+      "type": "bullet_list",
+      "items": [
+        "Web Dashboard: https://nexuswork.sewelass.com/",
+        "GitHub Repository: https://github.com/amspizzy/nexuswork-uinic8",
+        "APK Demo: nexuswork-mobile-demo.apk (included in repository)"
+      ]
+    }
+  ]
+}
