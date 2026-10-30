@@ -30,6 +30,9 @@
 </div>
 <!-- End of Page Wrapper (#wrapper) -->
 
+<!-- Mobile Off-canvas Drawer Backdrop -->
+<div class="nw-sidebar-backdrop"></div>
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded shadow" href="#page-top">
     <i class="fas fa-angle-up"></i>
@@ -739,7 +742,11 @@
 
     // Initial check
     refreshGoogleStatus();
-</script>
+
+    // Mobile Sidebar Drawer Backdrop Click
+    $(document).on('click', '.nw-sidebar-backdrop', function() {
+        $('#sidebarToggleTop').trigger('click');
+    });
 </script>
 
 </body>

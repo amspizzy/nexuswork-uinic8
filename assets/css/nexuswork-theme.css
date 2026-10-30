@@ -1749,41 +1749,56 @@ footer.sticky-footer {
    Mobile & Responsive Enhancements (Screen & Mobile Device Polish)
    ========================================================================== */
 @media (max-width: 767px) {
-    /* Sidebar: Off-canvas mobile behavior */
+    /* Sidebar: Off-canvas mobile drawer */
     .sidebar,
     #accordionSidebar {
-        position: fixed;
-        left: -100%;
-        width: 16.5rem;
-        height: 100vh;
-        z-index: 1050;
-        transition: left 0.3s ease-in-out;
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        position: fixed !important;
+        top: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 16.5rem !important;
+        height: 100vh !important;
+        z-index: 1050 !important;
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        box-shadow: none !important;
+        visibility: visible !important;
     }
     
-    /* Sidebar visible state (toggled) */
-    body.sidebar-toggled #accordionSidebar,
-    body.sidebar-toggled #accordionSidebar.sidebar {
-        left: 0 !important;
-        box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.15) !important;
+    /* Sidebar visible when toggled */
+    body.sidebar-toggled .sidebar,
+    body.sidebar-toggled #accordionSidebar {
+        transform: translateX(0) !important;
+        box-shadow: 0.5rem 0 2rem rgba(0, 0, 0, 0.25) !important;
     }
 
     /* Backdrop overlay */
-    body.sidebar-toggled::before {
-        content: '';
+    .nw-sidebar-backdrop {
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1040;
+        right: 0;
+        bottom: 0;
+        background: rgba(15, 23, 42, 0.5);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+        z-index: 1045;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    body.sidebar-toggled .nw-sidebar-backdrop {
+        display: block !important;
+        opacity: 1 !important;
     }
     
     /* Content wrapper full width on mobile */
     #content-wrapper {
         width: 100% !important;
+        min-width: 100% !important;
         margin-left: 0 !important;
+        overflow-x: hidden !important;
     }
     
     /* Topbar mobile */
@@ -2007,25 +2022,5 @@ footer.sticky-footer {
     
     .btn-group .btn {
         width: 100% !important;
-    }
-}
-
-/* Force sidebar toggle mobile - MUST BE LAST RULE */
-@media (max-width: 767px) {
-    #page-top.sidebar-toggled #accordionSidebar {
-        left: 0 !important;
-        box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.15) !important;
-    }
-    
-    #page-top.sidebar-toggled::after {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1040;
-        pointer-events: none;
     }
 }
