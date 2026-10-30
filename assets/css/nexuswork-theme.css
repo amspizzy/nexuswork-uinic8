@@ -498,48 +498,51 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* ==========================================================================
-   Topbar: Seamless Minimalist Header
-   ========================================================================== */
-.topbar {
-    height: 4.5rem !important;
-    background: #ffffff !important;
-    border-bottom: 1px solid #f1f5f9 !important;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
-    z-index: 99;
-}
+   /* Topbar: Seamless Minimalist Header
+      ========================================================================== */
+   .topbar {
+       height: 4.5rem !important;
+       background: #ffffff !important;
+       border-bottom: 1px solid #f1f5f9 !important;
+       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+       z-index: 99;
+       position: sticky;
+       top: 0;
+   }
 
-/* Continuous Pill Search Bar (Mirrors Reference Mockup) */
-.topbar-pill-search {
-    position: relative;
-    width: 24rem;
-}
-.topbar-pill-search input {
-    width: 100%;
-    height: 42px;
-    border-radius: 9999px;
-    background: #f1f5f9;
-    border: 1.5px solid transparent;
-    padding: 0 1.25rem 0 2.65rem;
-    font-size: 0.88rem;
-    color: #1e293b;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-.topbar-pill-search input:focus {
-    background: #ffffff;
-    border-color: #cbd5e1;
-    box-shadow: 0 0 0 4px rgba(13, 99, 216, 0.08);
-    outline: none;
-}
-.topbar-pill-search .search-icon {
-    position: absolute;
-    left: 1.1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #94a3b8;
-    font-size: 0.9rem;
-    pointer-events: none;
-}
+   /* Continuous Pill Search Bar (Mirrors Reference Mockup) */
+   .topbar-pill-search {
+       position: relative;
+       width: 24rem;
+       max-width: 100%;
+   }
+   .topbar-pill-search input {
+       width: 100%;
+       height: 42px;
+       border-radius: 9999px;
+       background: #f1f5f9;
+       border: 1.5px solid transparent;
+       padding: 0 1.25rem 0 2.65rem;
+       font-size: 0.88rem;
+       color: #1e293b;
+       font-weight: 500;
+       transition: all 0.2s ease;
+   }
+   .topbar-pill-search input:focus {
+       background: #ffffff;
+       border-color: #cbd5e1;
+       box-shadow: 0 0 0 4px rgba(13, 99, 216, 0.08);
+       outline: none;
+   }
+   .topbar-pill-search .search-icon {
+       position: absolute;
+       left: 1.1rem;
+       top: 50%;
+       transform: translateY(-50%);
+       color: #94a3b8;
+       font-size: 0.9rem;
+       pointer-events: none;
+   }
 
 /* Round Icon Buttons (Bell, Help, Settings) */
 .topbar-circle-btn {
@@ -603,6 +606,7 @@ h1, h2, h3, h4, h5, h6,
 
 .topbar .navbar-search {
     width: 25rem !important;
+    max-width: 100% !important;
 }
 
 .topbar .navbar-search .form-control {
@@ -1745,14 +1749,106 @@ footer.sticky-footer {
    Mobile & Responsive Enhancements (Screen & Mobile Device Polish)
    ========================================================================== */
 @media (max-width: 768px) {
+    /* Sidebar: Off-canvas mobile behavior */
+    .sidebar {
+        position: fixed !important;
+        left: -100% !important;
+        width: 16.5rem !important;
+        height: 100vh !important;
+        z-index: 1050 !important;
+        transition: left 0.3s ease-in-out !important;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    }
+    
+    /* Sidebar visible state (toggled) */
+    body:not(.sidebar-toggled) .sidebar {
+        left: 0 !important;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    /* Content wrapper full width on mobile */
+    #content-wrapper {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    
+    /* Mobile overlay when sidebar open */
+    body:not(.sidebar-toggled)::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    /* Topbar mobile */
+    .topbar {
+        height: 3.75rem !important;
+        padding: 0 0.75rem !important;
+        position: sticky !important;
+        top: 0 !important;
+        width: 100% !important;
+    }
+    
+    .topbar .nav-item .nav-link {
+        height: 3.75rem !important;
+        padding: 0 0.5rem !important;
+    }
+    
+    /* Hide search bar on very small screens */
+    @media (max-width: 576px) {
+        .topbar-pill-search,
+        .topbar .navbar-search {
+            display: none !important;
+        }
+    }
+    
+    /* Topbar buttons minimum touch target */
+    .topbar-circle-btn {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.1rem !important;
+    }
+    
+    .user-avatar-initial {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    /* Hero welcome card mobile */
     .hero-welcome-card {
         padding: 1.25rem 1rem !important;
         border-radius: var(--nw-radius-lg) !important;
+        margin-bottom: 1rem !important;
     }
     .hero-welcome-card h2 {
         font-size: 1.3rem !important;
     }
+    .hero-welcome-card p {
+        font-size: 0.85rem !important;
+    }
     
+    /* Folder cards mobile - full width on small screens */
+    .folder-card {
+        margin-bottom: 1rem !important;
+        min-height: 140px !important;
+        padding: 1.15rem !important;
+    }
+    
+    .folder-card-val {
+        font-size: 1.3rem !important;
+    }
+    
+    /* Metric cards mobile */
     .metric-card {
         padding: 1rem !important;
         margin-bottom: 0.75rem !important;
@@ -1760,48 +1856,160 @@ footer.sticky-footer {
     .metric-value {
         font-size: 1.35rem !important;
     }
-
+    
+    /* Pipeline stepper mobile - horizontal scroll */
     .pipeline-stepper {
         padding: 0.85rem !important;
         gap: 8px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
     }
     .pipeline-step {
         min-width: 105px !important;
+        flex-shrink: 0 !important;
     }
     .pipeline-step-badge {
-        width: 32px !important;
-        height: 32px !important;
+        width: 36px !important;
+        height: 36px !important;
         font-size: 0.75rem !important;
     }
     
-    .topbar {
-        height: 3.75rem !important;
-        padding: 0 0.75rem !important;
+    /* Buttons mobile - minimum touch target 44x44px */
+    .btn {
+        min-height: 44px !important;
+        padding: 0.65rem 1.25rem !important;
     }
-    .topbar .nav-item .nav-link {
-        height: 3.75rem !important;
-        padding: 0 0.5rem !important;
-    }
-
+    
     .btn-group-sm > .btn, .btn-sm {
-        padding: 0.35rem 0.55rem !important;
-        font-size: 0.75rem !important;
+        min-height: 38px !important;
+        padding: 0.45rem 0.75rem !important;
+        font-size: 0.8rem !important;
     }
-
+    
+    /* Card mobile */
+    .card {
+        margin-bottom: 1rem !important;
+    }
+    
+    .card-header {
+        padding: 0.9rem 1rem !important;
+    }
+    
     .card-body {
         padding: 1rem !important;
     }
-
+    
+    /* Table mobile - force horizontal scroll */
+    .table-responsive {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    .table {
+        min-width: 600px !important;
+        margin-bottom: 0 !important;
+    }
+    
     .table thead th {
         padding: 0.65rem 0.75rem !important;
         font-size: 0.68rem !important;
+        white-space: nowrap !important;
     }
     .table td {
         padding: 0.75rem !important;
         font-size: 0.8rem !important;
     }
+    
+    /* Minimal table card mobile */
+    .minimal-table-card {
+        padding: 1rem !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    
+    .minimal-table {
+        min-width: 600px !important;
+    }
+    
+    /* Dashboard header mobile */
+    .dash-header-title {
+        font-size: 1.35rem !important;
+    }
+    
+    /* Quick access heading mobile */
+    .quick-access-heading {
+        margin-bottom: 0.85rem !important;
+    }
+    
+    /* Form controls mobile */
+    .form-control, .form-select {
+        min-height: 44px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    /* Modal mobile */
+    .modal-dialog {
+        margin: 0.5rem !important;
+        max-width: calc(100% - 1rem) !important;
+    }
+    
+    .modal-content {
+        border-radius: var(--nw-radius-lg) !important;
+    }
+    
+    /* Dropdown mobile */
+    .dropdown-menu {
+        max-width: 90vw !important;
+    }
+    
+    /* Status pills mobile */
+    .status-pill {
+        font-size: 0.7rem !important;
+        padding: 3px 8px !important;
+    }
+    
+    /* Footer mobile */
+    footer.sticky-footer {
+        padding: 1rem 0 !important;
+    }
+    
+    /* Container padding mobile */
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
 
-    .sidebar {
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    .dash-header-title {
+        font-size: 1.15rem !important;
+    }
+    
+    .folder-card-val {
+        font-size: 1.15rem !important;
+    }
+    
+    .metric-value {
+        font-size: 1.2rem !important;
+    }
+    
+    /* Hide secondary content on very small screens */
+    .hero-badge-pill,
+    .metric-trend {
+        font-size: 0.68rem !important;
+    }
+    
+    /* Stack utility buttons */
+    .btn-group {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .btn-group .btn {
         width: 100% !important;
     }
 }
