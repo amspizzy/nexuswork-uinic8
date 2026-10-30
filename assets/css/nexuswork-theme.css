@@ -1748,46 +1748,42 @@ footer.sticky-footer {
 /* ==========================================================================
    Mobile & Responsive Enhancements (Screen & Mobile Device Polish)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     /* Sidebar: Off-canvas mobile behavior */
-    .sidebar {
-        position: fixed !important;
-        left: -100% !important;
-        width: 16.5rem !important;
-        height: 100vh !important;
-        z-index: 1050 !important;
-        transition: left 0.3s ease-in-out !important;
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+    .sidebar,
+    #accordionSidebar {
+        position: fixed;
+        left: -100%;
+        width: 16.5rem;
+        height: 100vh;
+        z-index: 1050;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     }
     
     /* Sidebar visible state (toggled) */
-    body:not(.sidebar-toggled) .sidebar {
+    body.sidebar-toggled #accordionSidebar,
+    body.sidebar-toggled #accordionSidebar.sidebar {
         left: 0 !important;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+
+    /* Backdrop overlay */
+    body.sidebar-toggled::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
     }
     
     /* Content wrapper full width on mobile */
     #content-wrapper {
         width: 100% !important;
         margin-left: 0 !important;
-    }
-    
-    /* Mobile overlay when sidebar open */
-    body:not(.sidebar-toggled)::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1040;
-        animation: fadeIn 0.3s ease;
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
     }
     
     /* Topbar mobile */
@@ -2011,5 +2007,25 @@ footer.sticky-footer {
     
     .btn-group .btn {
         width: 100% !important;
+    }
+}
+
+/* Force sidebar toggle mobile - MUST BE LAST RULE */
+@media (max-width: 767px) {
+    #page-top.sidebar-toggled #accordionSidebar {
+        left: 0 !important;
+        box-shadow: 0.5rem 0 1rem rgba(0, 0, 0, 0.15) !important;
+    }
+    
+    #page-top.sidebar-toggled::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1040;
+        pointer-events: none;
     }
 }
