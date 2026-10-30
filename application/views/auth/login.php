@@ -667,7 +667,7 @@
         import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
         const firebaseConfig = {
-            apiKey: "***",
+            apiKey: "AIzaSyAGpqUjwwkPHVPoGAWbwQt4n4N3Tx5u1og",
             authDomain: "sewelasapp.firebaseapp.com",
             projectId: "sewelasapp",
             storageBucket: "sewelasapp.firebasestorage.app",
