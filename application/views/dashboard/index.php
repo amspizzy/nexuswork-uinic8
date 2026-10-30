@@ -182,7 +182,7 @@
     <!-- Production Workflow Pipeline Tracker -->
     <div class="pipeline-stepper mb-4">
         <div class="pipeline-step <?= ($total_proses > 0) ? 'active' : ''; ?>">
-            <div class="pipeline-step-badge">1</div>
+            <div class="pipeline-step-badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">1</div>
             <div class="pipeline-step-info">
                 <span class="pipeline-step-title">Antri</span>
                 <span class="pipeline-step-count">SPK Masuk</span>
@@ -191,7 +191,7 @@
         <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
 
         <div class="pipeline-step <?= ($total_proses > 0) ? 'active' : ''; ?>">
-            <div class="pipeline-step-badge" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">2</div>
+            <div class="pipeline-step-badge" style="background: rgba(59, 130, 246, 0.15); color: #3b82f6;">2</div>
             <div class="pipeline-step-info">
                 <span class="pipeline-step-title">Produksi</span>
                 <span class="pipeline-step-count">Fabrikasi</span>
@@ -200,7 +200,7 @@
         <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
 
         <div class="pipeline-step">
-            <div class="pipeline-step-badge" style="background: rgba(6, 182, 212, 0.15); color: #0891b2;">3</div>
+            <div class="pipeline-step-badge" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6;">3</div>
             <div class="pipeline-step-info">
                 <span class="pipeline-step-title">Packing</span>
                 <span class="pipeline-step-count">QC &amp; Box</span>
@@ -209,7 +209,7 @@
         <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
 
         <div class="pipeline-step">
-            <div class="pipeline-step-badge" style="background: rgba(13, 99, 216, 0.15); color: #0d63d8;">4</div>
+            <div class="pipeline-step-badge" style="background: rgba(6, 182, 212, 0.15); color: #06b6d4;">4</div>
             <div class="pipeline-step-info">
                 <span class="pipeline-step-title">Dikirim</span>
                 <span class="pipeline-step-count">Ekspedisi</span>
@@ -218,7 +218,7 @@
         <div class="pipeline-arrow"><i class="fas fa-chevron-right"></i></div>
 
         <div class="pipeline-step active">
-            <div class="pipeline-step-badge" style="background: rgba(16, 185, 129, 0.15); color: #059669;">5</div>
+            <div class="pipeline-step-badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">5</div>
             <div class="pipeline-step-info">
                 <span class="pipeline-step-title">Diterima</span>
                 <span class="pipeline-step-count"><?= $total_selesai ?> Selesai</span>
@@ -269,16 +269,19 @@
                     <div class="mt-3 pt-3 border-top text-center">
                         <div class="row no-gutters text-center small">
                             <div class="col">
-                                <span class="d-block font-weight-bold text-primary">&bull; Antri</span>
+                                <span class="d-block font-weight-bold" style="color: #f59e0b;">&bull; Antri</span>
                             </div>
                             <div class="col">
-                                <span class="d-block font-weight-bold text-warning">&bull; Produksi</span>
+                                <span class="d-block font-weight-bold" style="color: #3b82f6;">&bull; Produksi</span>
                             </div>
                             <div class="col">
-                                <span class="d-block font-weight-bold text-info">&bull; Packing</span>
+                                <span class="d-block font-weight-bold" style="color: #8b5cf6;">&bull; Packing</span>
                             </div>
                             <div class="col">
-                                <span class="d-block font-weight-bold text-success">&bull; Diterima</span>
+                                <span class="d-block font-weight-bold" style="color: #06b6d4;">&bull; Dikirim</span>
+                            </div>
+                            <div class="col">
+                                <span class="d-block font-weight-bold" style="color: #10b981;">&bull; Diterima</span>
                             </div>
                         </div>
                     </div>
@@ -296,8 +299,8 @@
     var ctxArea = document.getElementById("myAreaChart");
     if (ctxArea) {
         var gradient = ctxArea.getContext('2d').createLinearGradient(0, 0, 0, 300);
-        gradient.addColorStop(0, 'rgba(13, 99, 216, 0.35)');
-        gradient.addColorStop(1, 'rgba(13, 99, 216, 0.00)');
+        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.35)');
+        gradient.addColorStop(1, 'rgba(37, 99, 235, 0.00)');
 
         var myAreaChart = new Chart(ctxArea, {
             type: 'line',
@@ -307,14 +310,14 @@
                     label: "Omzet",
                     lineTension: 0.35,
                     backgroundColor: gradient,
-                    borderColor: "#0d63d8",
+                    borderColor: "#2563eb",
                     borderWidth: 2.5,
                     pointRadius: 4,
                     pointBackgroundColor: "#ffffff",
-                    pointBorderColor: "#0d63d8",
+                    pointBorderColor: "#2563eb",
                     pointBorderWidth: 2.5,
                     pointHoverRadius: 6,
-                    pointHoverBackgroundColor: "#0d63d8",
+                    pointHoverBackgroundColor: "#2563eb",
                     pointHoverBorderColor: "#ffffff",
                     pointHoverBorderWidth: 2,
                     data: <?= $chart_area; ?>,
@@ -390,13 +393,26 @@
     // Modern Doughnut Pie Chart
     var ctxPie = document.getElementById("myPieChart");
     if (ctxPie) {
+        var statusColorMap = {
+            'Antri': '#f59e0b',
+            'Produksi': '#3b82f6',
+            'Packing': '#8b5cf6',
+            'Dikirim': '#06b6d4',
+            'Diterima': '#10b981',
+            'Cancel': '#ef4444'
+        };
+        var pieLabels = <?= $pie_labels; ?>;
+        var pieColors = pieLabels.map(function(label) {
+            return statusColorMap[label] || '#2563eb';
+        });
+
         var myPieChart = new Chart(ctxPie, {
             type: 'doughnut',
             data: {
-                labels: <?= $pie_labels; ?>,
+                labels: pieLabels,
                 datasets: [{
                     data: <?= $pie_counts; ?>,
-                    backgroundColor: ['#0d63d8', '#38bdf8', '#f59e0b', '#10b981', '#ef4444', '#64748b'],
+                    backgroundColor: pieColors,
                     borderWidth: 2,
                     borderColor: '#ffffff',
                     hoverBorderColor: '#ffffff'
