@@ -667,13 +667,11 @@
         import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
         const firebaseConfig = {
-            apiKey: "AIzaSyDwgjV7m8nH15mOzPcl1_C8Kfx34g7AGYc",
-            authDomain: "nexuswork-uinic8.firebaseapp.com",
-            databaseURL: "https://nexuswork-uinic8-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "nexuswork-uinic8",
-            storageBucket: "nexuswork-uinic8.firebasestorage.app",
-            messagingSenderId: "335535087896",
-            appId: "1:335535087896:web:58a83aea9eb81412fe7e6d"
+            apiKey: "***",
+            authDomain: "sewelasapp.firebaseapp.com",
+            projectId: "sewelasapp",
+            storageBucket: "sewelasapp.firebasestorage.app",
+            messagingSenderId: "172933565352"
         };
 
         const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
